@@ -1,5 +1,13 @@
 {
   "layout" : {
-    "back" : "voltar"    
+    "Overview" : "Geral",
+    "Scaffolding" : "Fundação",
+    "Base CSS" : "CSS Base",
+    "Components" : "Componentes",
+    "Javascript plugins" : "Plugins de Javascript",
+    "Using LESS" : "Usando o LESS",
+    "Customize" : "Customizando",
+    "Examples" : "Exemplos",
+    "Back to top" : "Voltar ao topo"  
   }
 }
