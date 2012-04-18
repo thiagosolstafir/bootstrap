@@ -15,38 +15,50 @@ var pages = fs.readdirSync(__dirname + '/../templates/pages')
 var template = fs.readFileSync(__dirname + '/../templates/layout.mustache', 'utf-8'),
 
 context = {
-     name: "layout",
+     name: "Layout",
      title: title,
      _i: function (k) { 
        if (language[context.name][k]) {
         return language[context.name][k]  
        } else {
-         console.log(blue + 'Missing translation to: ' + red + k + reset);
+         console.log(blue + 'Missing translation for: ' + red + k + reset);
          return k
        } 
      }  
   }
-var template = hogan.compile(template,{ sectionTags: [{o: '_i', c: 'i'}]})
-
-console.log(template)
+template = hogan.compile(template,{ sectionTags: [{o: '_i', c: 'i'}]})
 
 pages.forEach(function(name){
+  var nicename = name
+    .replace(/\.mustache/, '')
+    .replace(/\-.*/, '')
+    .replace(/(.)/, function ($1) { return $1.toUpperCase() })
   var page = fs.readFileSync(__dirname  + '/../templates/pages/' + name, 'utf-8')
-    , page_context = {
-       name: name,
-       title: name,
-       _i: function (k) { 
-         if (language[context.name][k]) {
-          return language[context.name][k]  
-         } else {
-           console.log(blue + 'Missing translation to: ' + red + k + reset);
-           return k
-         } 
-       }  
-     }
+    , page_context = {}
+  page_context[name.replace(/\.mustache$/, '')] = 'active'
+  page_context.production = prod
+  page_context.title = nicename,
+  page_context.name = nicename,
+  page_context._i = function (k) { 
+      if(language[page_context.name]) {
+        if (language[page_context.name][k]) {
+          return language[page_context.name][k]  
+        } else {
+          console.log(blue + 'Missing translation in page '+ nicename +' for: ' + red + k + reset);
+          return k
+        }
+      } else {
+        console.log(red + "missing key for "+ name +": " + k + reset);
+      }
+   } 
+  if (page_context.title == 'Index') {
+    page_context.title = title
+  } else {
+    page_context.title += ' · ' + title
+  }
   page = hogan.compile(page, { sectionTags: [{o:'_i', c:'i'}] })
-  page = template.render(context, {
+  full_page = template.render(page_context, {
     body: page
   })
-  console.log(page)
+  //console.log(full_page)
 })

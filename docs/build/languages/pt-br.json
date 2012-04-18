@@ -1,5 +1,5 @@
 {
-  "layout" : {
+  "Layout" : {
     "Overview" : "Geral",
     "Scaffolding" : "Fundação",
     "Base CSS" : "CSS Base",
@@ -9,5 +9,35 @@
     "Customize" : "Customizando",
     "Examples" : "Exemplos",
     "Back to top" : "Voltar ao topo"  
+  },
+  "Overview" : {
+    "Overview" : "Visão geral"
+  },
+  "Base" : {
+    "Base CSS" : "CSS Base"
+  },
+  "Components" : {
+    "Components" : "Componentes"
+  },
+  "Download" : {
+    "Download" : "Download"
+  },
+  "Examples" : {
+    "Examples" : "Exemplos"
+  },
+  "Index" : {
+    "Index" : "Página Inicial"
+  },
+  "Javascript" : {
+    "Javascript" : "Javascript"
+  },
+  "Less" : {
+    "Less" : "Less"
+  },
+  "Scaffolding" : {
+    "Scaffolding" : "Fundação"
+  },
+  "Upgrading" : {
+    "Upgrading" : "Atualizando"
   }
 }
