@@ -21,7 +21,7 @@ context = {
        if (language[context.name][k]) {
         return language[context.name][k]  
        } else {
-         console.log(blue + 'Missing translation for: ' + red + k + reset);
+         console.log(blue + 'Missing translation in Layout for: ' + red + k + reset);
          return k
        } 
      }  
