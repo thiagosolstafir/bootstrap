@@ -65,4 +65,4 @@ watch:
 	watchr -e "watch('less/.*\.less') { system 'make' }"
 
 
-.PHONY: docs watch gh-pages
+.PHONY: docs watch gh-pages gh-pages-translated
