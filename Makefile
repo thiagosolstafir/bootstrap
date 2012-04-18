@@ -51,6 +51,11 @@ gh-pages: docs
 	node docs/build production
 	cp -r docs/* ../bootstrap-gh-pages
 
+gh-pages-translated: docs
+	rm -f ../bootstrap-gh-pages/assets/bootstrap.zip
+	node docs/build/translation.js production
+	cp -r docs/* ../bootstrap-gh-pages
+
 #
 # WATCH LESS FILES
 #
