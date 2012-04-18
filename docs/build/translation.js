@@ -26,8 +26,7 @@ context = {
        } 
      }  
   }
-template = hogan.compile(template,{ sectionTags: [{o: '_i', c: 'i'}]})
-
+template = hogan.compile(template,{sectionTags: [{o: '_i', c: 'i'}]})
 pages.forEach(function(name){
   var nicename = name
     .replace(/\.mustache/, '')
@@ -57,8 +56,9 @@ pages.forEach(function(name){
     page_context.title += ' · ' + title
   }
   page = hogan.compile(page, { sectionTags: [{o:'_i', c:'i'}] })
-  full_page = template.render(page_context, {
-    body: page
+  page = page.render(page_context)
+  full_page = template.render(context, {
+    body: page,
   })
-  //console.log(full_page)
+  fs.writeFileSync(__dirname + '/../' + name.replace(/mustache$/, 'html'), full_page, 'utf-8')
 })

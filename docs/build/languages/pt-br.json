@@ -14,7 +14,8 @@
     "Overview" : "Visão geral"
   },
   "Base" : {
-    "Base CSS" : "CSS Base"
+    "Base CSS" : "CSS Base",
+    "On top of the scaffolding, basic HTML elements are styled and enhanced with extensible classes to provide a fresh, consistent look and feel.": "No topo da fundação, elementos HTML básicos são estilizados e melhorados com classes extensivas para prover uma consistência visual"
   },
   "Components" : {
     "Components" : "Componentes"
@@ -38,6 +39,7 @@
     "Scaffolding" : "Fundação"
   },
   "Upgrading" : {
-    "Upgrading" : "Atualizando"
+    "Upgrading" : "Atualizando",
+    "Upgrading to Bootstrap 2" : "Atualizando para o Bootstrap 2"
   }
 }
