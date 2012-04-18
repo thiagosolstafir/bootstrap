@@ -22,6 +22,19 @@ docs: bootstrap
 	cp js/*.js docs/assets/js/
 	cp js/tests/vendor/jquery.js docs/assets/js/
 
+translate: bootstrap
+	rm docs/assets/bootstrap.zip
+	zip -r docs/assets/bootstrap.zip bootstrap
+	cp bootstrap/js/bootstrap.js docs/assets/js/bootstrap.js
+	cp bootstrap/js/bootstrap.min.js docs/assets/js/bootstrap.min.js
+	rm -r bootstrap
+	lessc ${BOOTSTRAP_LESS} > ${BOOTSTRAP}
+	lessc ${BOOTSTRAP_RESPONSIVE_LESS} > ${BOOTSTRAP_RESPONSIVE}
+	node docs/build/translation.js
+	cp img/* docs/assets/img/
+	cp js/*.js docs/assets/js/
+	cp js/tests/vendor/jquery.js docs/assets/js/
+
 #
 # BUILD SIMPLE BOOTSTRAP DIRECTORY
 # lessc & uglifyjs are required
