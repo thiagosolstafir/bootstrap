@@ -9,9 +9,7 @@ blue  = '\033[34m';
 reset = '\033[0m';
 
 var language = cjson.load(__dirname + '/languages/'+langchoose+'.json')
-
 var pages = fs.readdirSync(__dirname + '/../templates/pages')
-
 var template = fs.readFileSync(__dirname + '/../templates/layout.mustache', 'utf-8'),
 
 context = {
@@ -27,6 +25,8 @@ context = {
      }  
   }
 template = hogan.compile(template,{sectionTags: [{o: '_i', c: 'i'}]})
+var translated_keys = {}
+var keys = {}
 pages.forEach(function(name){
   var nicename = name
     .replace(/\.mustache/, '')
@@ -43,7 +43,11 @@ pages.forEach(function(name){
         if (language[page_context.name][k]) {
           return language[page_context.name][k]  
         } else {
-          console.log(blue + 'Missing translation in page '+ nicename +' for: ' + red + k + reset);
+          console.log(blue + 'Missing translation in page '+ nicename +' for: ' + red + k + reset)
+          
+          translated_keys[nicename] = {}
+          keys[k] = ""
+          translated_keys[nicename] = keys
           return k
         }
       } else {
@@ -62,3 +66,4 @@ pages.forEach(function(name){
   })
   fs.writeFileSync(__dirname + '/../' + name.replace(/mustache$/, 'html'), full_page, 'utf-8')
 })
+fs.writeFileSync(__dirname + '/languages/template.json', JSON.stringify(translated_keys), 'utf-8')
