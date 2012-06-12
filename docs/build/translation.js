@@ -3,6 +3,7 @@ var hogan = require('hogan.js')
 var fs    = require('fs')
 var cjson = require('cjson') , prod  = process.argv[2] == 'production', title = 'Twitter Bootstrap'
 var langchoose = process.argv[3] || "pt-br"
+var count = 0
 
 red   = '\033[31m';
 blue  = '\033[34m';
@@ -20,6 +21,7 @@ context = {
         return language[context.name][k]  
        } else {
          console.log(blue + 'Missing translation in Layout for: ' + red + k + reset);
+         count++
          return k
        } 
      }  
@@ -27,7 +29,7 @@ context = {
 template = hogan.compile(template,{sectionTags: [{o: '_i', c: 'i'}]})
 var translated_keys = {}
 var keys = {}
-var count = 0;
+
 pages.forEach(function(name){
   
   var nicename = name
@@ -46,7 +48,7 @@ pages.forEach(function(name){
           return language[page_context.name][k]  
         } else {
           console.log(blue + 'Missing translation in page '+ nicename +' for: ' + red + k + reset)
-          count++;
+          count++
           translated_keys[nicename] = {}
           keys[k] = ""
           translated_keys[nicename] = keys
