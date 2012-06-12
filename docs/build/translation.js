@@ -27,7 +27,9 @@ context = {
 template = hogan.compile(template,{sectionTags: [{o: '_i', c: 'i'}]})
 var translated_keys = {}
 var keys = {}
+var count = 0;
 pages.forEach(function(name){
+  
   var nicename = name
     .replace(/\.mustache/, '')
     .replace(/\-.*/, '')
@@ -44,7 +46,7 @@ pages.forEach(function(name){
           return language[page_context.name][k]  
         } else {
           console.log(blue + 'Missing translation in page '+ nicename +' for: ' + red + k + reset)
-          
+          count++;
           translated_keys[nicename] = {}
           keys[k] = ""
           translated_keys[nicename] = keys
@@ -67,3 +69,4 @@ pages.forEach(function(name){
   fs.writeFileSync(__dirname + '/../' + name.replace(/mustache$/, 'html'), full_page, 'utf-8')
 })
 fs.writeFileSync(__dirname + '/languages/template.json', JSON.stringify(translated_keys), 'utf-8')
+console.log("There's  "+ count +" words for translate");
