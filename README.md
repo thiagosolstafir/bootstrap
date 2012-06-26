@@ -1,3 +1,15 @@
+[Twitter Bootstrap translated to portuguese](http://alexanmtz.github.com/bootstrap/)
+=================
+
+PROGRESS: 90% of translated strings
+
+This is a portuguese translated unofficial version of Twitter Bootstrap.
+
+Esta é uma versão não oficial traduzida do Twitter Bootstrap. 
+
+This script can be used to translate bootstrap to any language, just changing a json of key : translation file and execute the right commands to generate the docs in the desired language
+ 
+
 [Twitter Bootstrap](http://twitter.github.com/bootstrap)
 =================
 
