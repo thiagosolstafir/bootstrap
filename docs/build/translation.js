@@ -43,15 +43,15 @@ pages.forEach(function(name){
   page_context.title = nicename,
   page_context.name = nicename,
   page_context._i = function (k) { 
-      if(language[page_context.name]) {
-        if (language[page_context.name][k]) {
-          return language[page_context.name][k]  
+      if(language['Pages']) {
+        if (language['Pages'][k]) {
+          return language['Pages'][k]  
         } else {
           console.log(blue + 'Missing translation in page '+ nicename +' for: ' + red + k + reset)
           count++
-          translated_keys[nicename] = {}
+          translated_keys['Pages'] = {}
           keys[k] = ""
-          translated_keys[nicename] = keys
+          translated_keys['Pages'] = keys
           return k
         }
       } else {
