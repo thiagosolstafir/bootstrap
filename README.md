@@ -12,6 +12,10 @@ This script can be used to translate bootstrap to any language, just changing a 
 you can use `make translate` and `make gh-pages-translated`. The last command create a folder one step back at tree structure, and you can have a static generated page.
 
 [Tutorials about Bootstrap and instructions to how translate to your language ](http://blog.alexandremagno.net/category/bootstrap-2/)
+
+All changes should be made at `pt-br` branch.
+
+Todas mudanças devem ser feitas na branch `pt-br`
  
 
 [Twitter Bootstrap](http://twitter.github.com/bootstrap)
