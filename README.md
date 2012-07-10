@@ -8,6 +8,10 @@ This is a portuguese translated unofficial version of Twitter Bootstrap.
 Esta é uma versão não oficial traduzida do Twitter Bootstrap. 
 
 This script can be used to translate bootstrap to any language, just changing a json of key : translation file and execute the right commands to generate the docs in the desired language
+
+you can use `make translate` and `make gh-pages-translated`. The last command create a folder one step back at tree structure, and you can have a static generated page.
+
+[Tutorials about Bootstrap and instructions to how translate to your language ](http://blog.alexandremagno.net/category/bootstrap-2/)
  
 
 [Twitter Bootstrap](http://twitter.github.com/bootstrap)
