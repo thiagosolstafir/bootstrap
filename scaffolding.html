@@ -409,8 +409,8 @@
 
   <div class="row">
     <div class="span6">
-      <h2>Fixed layout</h2>
-      <p>The default and simple 940px-wide, centered layout for just about any website or page provided by a single <code>&lt;div class="container"&gt;</code>.</p>
+      <h2>Layout fixo</h2>
+      <p>O layout padrão e simples de 940px de largura e centralizado para qualquer site ou página com um único <code>&lt;div class="container"&gt;</code></p>
       <div class="mini-layout">
         <div class="mini-layout-body"></div>
       </div>
@@ -424,7 +424,7 @@
     </div><!-- /.span -->
     <div class="span6">
       <h2>Layout fluido</h2>
-      <p><code>&lt;div class="container-fluid"&gt;</code> gives flexible page structure, min- and max-widths, and a left-hand sidebar. It's great for apps and docs.</p>
+      <p><code>&lt;div class="container-fluid"&gt;</code> te dá uma estrutura de página flexível, com largura máxima e mínima, e com uma barra lateral direita. Ótima para aplicativos e documentação</p>
       <div class="mini-layout fluid">
         <div class="mini-layout-sidebar"></div>
         <div class="mini-layout-body"></div>
@@ -433,10 +433,10 @@
 &lt;div class="container-fluid"&gt;
   &lt;div class="row-fluid"&gt;
     &lt;div class="span2"&gt;
-      &lt;!--Sidebar content--&gt;
+      &lt;!--conteúdo da lateral--&gt;
     &lt;/div&gt;
     &lt;div class="span10"&gt;
-      &lt;!--Body content--&gt;
+      &lt;!--conteúdo do corpo--&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -452,46 +452,46 @@
 ================================================== -->
 <section id="responsive">
   <div class="page-header">
-    <h1>Responsive design <small>Media queries for various devices and resolutions</small></h1>
+    <h1>Design responsivo <small>Media queries para vários dispositivos e resoluções</small></h1>
   </div>
   <!-- Supported devices -->
   <div class="row">
     <div class="span4">
       <p><img src="assets/img/responsive-illustrations.png" alt="Responsive devices"></p>
-      <h3>What they do</h3>
-      <p>Media queries allow for custom CSS based on a number of conditions&mdash;ratios, widths, display type, etc&mdash;but usually focuses around <code>min-width</code> and <code>max-width</code>.</p>
+      <h3>O que eles fazem</h3>
+      <p>Os Media queries permitem ter CSS customizado baseado em um número de condições&mdash;aspecto, larguras, dipo de exibição, etc&mdash;mas geralmente focado em <code>min-width</code> and <code>max-width</code>.</p>
       <ul>
-        <li>Modify the width of column in our grid</li>
-        <li>Stack elements instead of float wherever necessary</li>
-        <li>Resize headings and text to be more appropriate for devices</li>
+        <li>Modificar a largura da coluna no seu grid</li>
+        <li>Elementos estagnados ao invés de float quando for necessário</li>
+        <li>Redimensionando cabeçalhos e textos para ser mais apropriados para dispositivos</li>
       </ul>
-      <p>Use media queries responsibly and only as a start to your mobile audiences. For larger projects, do consider dedicated code bases and not layers of media queries.</p>
+      <p>Usar media queries responsivamente e somente como princípio para a audiência de dispositivos móveis. Para projetos mariores, considere dedicar bases de código e não em camadas de media queries</p>
     </div><!-- /.span -->
     <div class="span8">
-      <h2>Supported devices</h2>
-      <p>Bootstrap supports a handful of media queries in a single file to help make your projects more appropriate on different devices and screen resolutions. Here's what's included:</p>
+      <h2>Dispositivos suportados</h2>
+      <p>O Bootstrap suporta uma utilidade de media queries em um único arquivo para ajudar a fazer seus projetos mais apropriados para diferentes dispositivos e resoluções de tela. Aqui está o que é incluso:</p>
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th>Label</th>
-            <th>Layout width</th>
-            <th>Column width</th>
-            <th>Gutter width</th>
+            <th>Nome</th>
+            <th>Largura do layout</th>
+            <th>largura da coluna</th>
+            <th>Largura do espaçamento</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Smartphones</td>
             <td>480px and below</td>
-            <td class="muted" colspan="2">Fluid columns, no fixed widths</td>
+            <td class="muted" colspan="2">Colunas fluidas, larguras não fixas</td>
           </tr>
           <tr>
-            <td>Smartphones to tablets</td>
+            <td>Smartphones e tablets</td>
             <td>767px and below</td>
-            <td class="muted" colspan="2">Fluid columns, no fixed widths</td>
+            <td class="muted" colspan="2">Colunas fluidas, larguras não fixas</td>
           </tr>
           <tr>
-            <td>Portrait tablets</td>
+            <td>Tablets no formato na orientação horizontal</td>
             <td>768px and above</td>
             <td>42px</td>
             <td>20px</td>
@@ -503,7 +503,7 @@
             <td>20px</td>
           </tr>
           <tr>
-            <td>Large display</td>
+            <td>Resolução de tela grande</td>
             <td>1200px and up</td>
             <td>70px</td>
             <td>30px</td>
@@ -511,8 +511,8 @@
         </tbody>
       </table>
 
-      <h3>Requires meta tag</h3>
-      <p>To ensure devices display responsive pages properly, include the viewport meta tag.</p>
+      <h3>Requer meta tag</h3>
+      <p>Para certificar-se que os dispositivos responsivos são exibidos apropriadamente, inclua a meta tag viewport</p>
       <pre class="prettyprint linenums">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
     </div><!-- /.span -->
   </div><!-- /.row -->
@@ -520,29 +520,29 @@
   <br>
 
   <!-- Media query code -->
-  <h2>Using the media queries</h2>
+  <h2>Usando media queries</h2>
   <div class="row">
     <div class="span4">
-      <p>Bootstrap doesn't automatically include these media queries, but understanding and adding them is very easy and requires minimal setup. You have a few options for including the responsive features of Bootstrap:</p>
+      <p>O Bootstrap não automaticamente inclui estes media queries, mas entendê-lo e adicioná-los é muito fácil e requer a mínima configuração. Você tem algumas opções, para incluir funcionalidades responsivas do Bootstrap</p>
       <ol>
-        <li>Use the compiled responsive version, bootstrap-responsive.css</li>
-        <li>Add @import "responsive.less" and recompile Bootstrap</li>
-        <li>Modify and recompile responsive.less as a separate file</li>
+        <li>Use a versão responsive compilada, o bootstrap-responsive.css</li>
+        <li>Adicione @import "responsive.less" e recompile o Bootstrap</li>
+        <li>Modifique e recompile responsive.less como um arquivo separado</li>
       </ol>
-      <p><strong>Why not just include it?</strong> Truth be told, not everything needs to be responsive. Instead of encouraging developers to remove this feature, we figure it best to enable it.</p>
+      <p><strong>Por que não simplesmente incluí-lo?</strong> Verdade seja dita, nem tudo precisa ser responsivo. Ao invés de encorajar desenvolvedores a remover esta funcionalidade, nós configuramos para melhor habilitá-la</p>
     </div><!-- /.span -->
     <div class="span8">
 <pre class="prettyprint linenums">
-  // Landscape phones and down
+  // dispositivo no formato paisagem e abaixos
   @media (max-width: 480px) { ... }
 
-  // Landscape phone to portrait tablet
+  // dispositivo em paisagem até os tablets em formato porta-retrato
   @media (max-width: 768px) { ... }
 
-  // Portrait tablet to landscape and desktop
+  // tables em formato porta retrato até os desktos no formato paisagem
   @media (min-width: 768px) and (max-width: 980px) { ... }
 
-  // Large desktop
+  // Desktop maiores
   @media (min-width: 1200px) { .. }
 </pre>
     </div><!-- /.span -->
@@ -550,75 +550,75 @@
   <br>
 
   <!-- Responsive utility classes -->
-  <h2>Responsive utility classes</h2>
+  <h2>Classes utilitárias responsivas</h2>
   <div class="row">
     <div class="span4">
-      <h3>What are they</h2>
-      <p>For faster mobile-friendly development, use these basic utility classes for showing and hidding content by device.</p>
+      <h3>O que elas são</h2>
+      <p>Para desenvolvimento amigável para dispositivos móveis, use estas classes utilitárias para exibir e esconder de acordo com o dispositivo</p>
       <h3>Quando usar</h2>
-      <p>Use on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation.</p>
-      <p>For example, you might show a <code>&lt;select&gt;</code> element for nav on mobile layouts, but not on tablets or desktops.</p>
+      <p>Use uma limitada e básica versão do seu site para evitar criar diferentes versões do mesmo site. Ao invés disto, use-os como complemento de cada apresentação do dispositivo</p>
+      <p>Por exemplo, você pode mostrar um elemento <code>&lt;select&gt;</code> para navegação em layouts mobile, mas não em tablets ou desktops</p>
     </div><!-- /.span -->
     <div class="span8">
-      <h3>Support classes</h3>
-      <p>Shown here is a table of the classes we support and their effect on a given media query layout (labeled by device). They can be found in <code>responsive.less</code>.</p>
+      <h3>Classes suportadas</h3>
+      <p>Aqui é mostrada uma tabela de classes que nós suportamos e seus efeitos em um layout media-query (rotulados como dispositivo). Eles podem ser encontrados em <code>responsive.less</code>.</p>
       <table class="table table-bordered table-striped responsive-utilities">
         <thead>
           <tr>
-            <th>Class</th>
-            <th>Phones <small>480px and below</small></th>
-            <th>Tablets <small>767px and below</small></th>
-            <th>Desktops <small>768px and above</small></th>
+            <th>Classe</th>
+            <th>Celulares <small>480px e abaixo</small></th>
+            <th>Tablets <small>767px e abaixo</small></th>
+            <th>Desktops <small>768px e abaixo</small></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th><code>.visible-phone</code></th>
-            <td class="is-visible">Visible</td>
-            <td class="is-hidden">Hidden</td>
-            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visível</td>
+            <td class="is-hidden">Escondido</td>
+            <td class="is-hidden">Escondido</td>
           </tr>
           <tr>
             <th><code>.visible-tablet</code></th>
-            <td class="is-hidden">Hidden</td>
-            <td class="is-visible">Visible</td>
-            <td class="is-hidden">Hidden</td>
+            <td class="is-hidden">Escondido</td>
+            <td class="is-visible">Visível</td>
+            <td class="is-hidden">Escondido</td>
           </tr>
           <tr>
             <th><code>.visible-desktop</code></th>
-            <td class="is-hidden">Hidden</td>
-            <td class="is-hidden">Hidden</td>
-            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Escondido</td>
+            <td class="is-hidden">Escondido</td>
+            <td class="is-visible">Visível</td>
           </tr>
           <tr>
             <th><code>.hidden-phone</code></th>
-            <td class="is-hidden">Hidden</td>
-            <td class="is-visible">Visible</td>
-            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Escondido</td>
+            <td class="is-visible">Visível</td>
+            <td class="is-visible">Visível</td>
           </tr>
           <tr>
             <th><code>.hidden-tablet</code></th>
-            <td class="is-visible">Visible</td>
-            <td class="is-hidden">Hidden</td>
-            <td class="is-visible">Visible</td>
+            <td class="is-visible">Visível</td>
+            <td class="is-hidden">Escondido</td>
+            <td class="is-visible">Visível</td>
           </tr>
           <tr>
             <th><code>.hidden-desktop</code></th>
-            <td class="is-visible">Visible</td>
-            <td class="is-visible">Visible</td>
-            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visível</td>
+            <td class="is-visible">Visível</td>
+            <td class="is-hidden">Escondido</td>
           </tr>
         </tbody>
       </table>
-      <h3>Test case</h3>
-      <p>Resize your browser or load on different devices to test the above clases.</p>
-      <h4>Visible on...</h4>
+      <h3>Caso de teste</h3>
+      <p>Redimensione seu browser para carregar em diferentes dispositivos e assim poder testar as classes acima</p>
+      <h4>Visível em...</h4>
       <ul class="responsive-utilities-test">
         <li>Phone<span class="visible-phone">&#10004; Phone</span></li>
         <li>Tablet<span class="visible-tablet">&#10004; Tablet</span></li>
         <li>Desktop<span class="visible-desktop">&#10004; Desktop</span></li>
       </ul>
-      <h4>Hidden on...</h4>
+      <h4>Escondido em...</h4>
       <ul class="responsive-utilities-test hidden-on">
         <li>Phone<span class="hidden-phone">&#10004; Phone</span></li>
         <li>Tablet<span class="hidden-tablet">&#10004; Tablet</span></li>
@@ -642,6 +642,7 @@
         <p>Desenvolvido com todo amor no mundo <a href="http://twitter.com/twitter" target="_blank">@twitter</a> por <a href="http://twitter.com/mdo" target="_blank">@mdo</a> e <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
         <p>Código licenciado sob <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Licença Apache v2.0</a>. A documentação é licenciada sob <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0</a>.</p>
         <p>Ícones do <a href="http://glyphicons.com">Glyphicons Free</a>, licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0</a>.</p>
+        <p>Esta é uma versão em português do twitter Bootstrap do Bootstrap oficial do Twitter. Mantido por <a href="http://blog.alexandremagno">Alexandre Magno</a></p>
       </footer>
 
     </div><!-- /container -->
