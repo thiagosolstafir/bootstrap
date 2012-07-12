@@ -71,4 +71,5 @@ pages.forEach(function(name){
   fs.writeFileSync(__dirname + '/../' + name.replace(/mustache$/, 'html'), full_page, 'utf-8')
 })
 fs.writeFileSync(__dirname + '/languages/template.json', JSON.stringify(translated_keys), 'utf-8')
+console.log("The json from missing translation files:" + JSON.stringify(translated_keys))
 console.log("There's  "+ count +" words for translate");
