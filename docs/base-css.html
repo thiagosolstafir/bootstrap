@@ -1143,9 +1143,9 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
     <div class="span8">
       <form class="form-horizontal">
         <fieldset>
-          <legend>Extending form controls</legend>
+          <legend>Extendendo controle de formulários</legend>
           <div class="control-group">
-            <label class="control-label">Form grid sizes</label>
+            <label class="control-label">Tamanhos do grid do form</label>
             <div class="controls docs-input-sizes">
               <input class="span1" type="text" placeholder=".span1">
               <input class="span2" type="text" placeholder=".span2">
@@ -1171,38 +1171,38 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
                 <option>4</option>
                 <option>5</option>
               </select>
-              <p class="help-block">Use the same <code>.span*</code> classes from the grid system for input sizes.</p>
+              <p class="help-block">Use as mesmas classes <code>.span*</code> do sistema de grid para tamanho dos inputs</p>
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label">Alternate sizes</label>
+            <label class="control-label">Tamanhos alternados</label>
             <div class="controls docs-input-sizes">
               <input class="input-mini" type="text" placeholder=".input-mini">
               <input class="input-small" type="text" placeholder=".input-small">
               <input class="input-medium" type="text" placeholder=".input-medium">
-              <p class="help-block">You may also use static classes that don't map to the grid, adapt to the responsive CSS styles, or account for varying types of controls (e.g., <code>input</code> vs. <code>select</code>).</p>
+              <p class="help-block">Você pode usar classes estáticas que não mapeiam o grid, adaptando ao estilo responsivo.</p>
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="prependedInput">Prepended text</label>
+            <label class="control-label" for="prependedInput">Texto anteposto</label>
             <div class="controls">
               <div class="input-prepend">
                 <span class="add-on">@</span><input class="span2" id="prependedInput" size="16" type="text">
               </div>
-              <p class="help-block">Here's some help text</p>
+              <p class="help-block">Aqui há um texto de ajuda</p>
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="appendedInput">Appended text</label>
+            <label class="control-label" for="appendedInput">Texto sobreposto</label>
             <div class="controls">
               <div class="input-append">
                 <input class="span2" id="appendedInput" size="16" type="text"><span class="add-on">.00</span>
               </div>
-              <span class="help-inline">Here's more help text</span>
+              <span class="help-inline">Aqui texto de ajuda</span>
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="appendedPrependedInput">Append and prepend</label>
+            <label class="control-label" for="appendedPrependedInput">Sobreposto e anteposto</label>
             <div class="controls">
               <div class="input-prepend input-append">
                 <span class="add-on">$</span><input class="span2" id="appendedPrependedInput" size="16" type="text"><span class="add-on">.00</span>
@@ -1210,7 +1210,7 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="appendedPrependedInput">Append with button</label>
+            <label class="control-label" for="appendedPrependedInput">Anteposto com botão</label>
             <div class="controls">
               <div class="input-append">
                 <input class="span2" id="appendedPrependedInput" size="16" type="text"><button class="btn" type="button">Go!</button>
@@ -1218,7 +1218,7 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="inlineCheckboxes">Inline checkboxes</label>
+            <label class="control-label" for="inlineCheckboxes">checkboxes inline</label>
             <div class="controls">
               <label class="checkbox inline">
                 <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
@@ -1240,17 +1240,17 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
               </label>
               <label class="checkbox">
                 <input type="checkbox" name="optionsCheckboxList2" value="option2">
-                Option two can also be checked and included in form results
+                Opção 2 pode também ser incluído
               </label>
               <label class="checkbox">
                 <input type="checkbox" name="optionsCheckboxList3" value="option3">
-                Option three can&mdash;yes, you guessed it&mdash;also be checked and included in form results
+                Opção 3
               </label>
-              <p class="help-block"><strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.</p>
+              <p class="help-block"><strong>Nota:</strong> nomes em volta destas opções dão uma área de click maior e formulários mais usáveis</p>
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label">Radio buttons</label>
+            <label class="control-label">Botões Radio</label>
             <div class="controls">
               <label class="radio">
                 <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
@@ -1258,7 +1258,7 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
               </label>
               <label class="radio">
                 <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                Option two can is something else and selecting it will deselect option one
+                A opção 2 pode ser algo a mais selecionada e não selecionar a opção 1
               </label>
             </div>
           </div>
@@ -1270,17 +1270,17 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
       </form>
     </div>
     <div class="span4">
-      <h3>Prepend &amp; append inputs</h3>
-      <p>Input groups&mdash;with appended or prepended text&mdash;provide an easy way to give more context for your inputs. Great examples include the @ sign for Twitter usernames or $ for finances.</p>
+      <h3>inputs sobrepostos e antepostos</h3>
+      <p>Grupos de input&mdash;com texto sobreposto ou anteposto dão uma maneira fácil de dar mais contexto para seus inputs. Ótimos examples incluem o sinal @ para um usuário twitter ou $ para finanças</p>
       <hr>
-      <h3>Checkboxes and radios</h3>
-      <p>Up to v1.4, Bootstrap required extra markup around checkboxes and radios to stack them. Now, it's a simple matter of repeating the <code>&lt;label class="checkbox"&gt;</code> that wraps the <code>&lt;input type="checkbox"&gt;</code>.</p>
-      <p>Inline checkboxes and radios are also supported. Just add <code>.inline</code> to any <code>.checkbox</code> or <code>.radio</code> and you're done.</p>
+      <h3>Checkbox e radio</h3>
+      <p>Depois da versão 1.4, o Bootstrap requer markup extra nos checkboxes e radios para estagná-los. Agora, é uma maneira simples de repetir <code>&lt;label class="checkbox"&gt;</code> que fica em torno de <code>&lt;input type="checkbox"&gt;</code>.</p>
+      <p>Checkbox inline e radios também são suportados, adicione <code>.inline</code> para qualquer <code>.checkbox</code> ou <code>.radio</code> e está feito</p>
       <hr>
-      <h4>Inline forms and append/prepend</h4>
-      <p>To use prepend or append inputs in an inline form, be sure to place the <code>.add-on</code> and <code>input</code> on the same line, without spaces.</p>
+      <h4>Formulários inline e antepostos / sobrepostos</h4>
+      <p>Para usar textos antepostos e sobrepostos em um formulário inline, certifique-se de colocar o <code>.add-on</code> and <code>input</code> na mesma linha, sem espaços</p>
       <hr>
-      <h4>Form help text</h4>
+      <h4>Formulários de texto ajuda</h4>
       <p>To add help text for your form inputs, include inline help text with <code>&lt;span class="help-inline"&gt;</code> or a help text block with <code>&lt;p class="help-block"&gt;</code> after the input element.</p>
     </div>
   </div><!-- /row -->
@@ -1306,22 +1306,22 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
       <tr>
         <td><button class="btn" href="#">Padrão</button></td>
         <td><code>btn</code></td>
-        <td>Standard gray button with gradient</td>
+        <td>Botão padrão cinza com gradiente</td>
       </tr>
       <tr>
-        <td><button class="btn btn-primary" href="#">Primary</button></td>
+        <td><button class="btn btn-primary" href="#">Primário</button></td>
         <td><code>btn btn-primary</code></td>
-        <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+        <td>Provê peso extra visual e identifica a ação primária em uma coleção de botões</td>
       </tr>
       <tr>
         <td><button class="btn btn-info" href="#">Informações</button></td>
         <td><code>btn btn-info</code></td>
-        <td>Used as an alternate to the default styles</td>
+        <td>Usar como alternativa para estilos padrão</td>
       </tr>
       <tr>
         <td><button class="btn btn-success" href="#">Sucesso</button></td>
         <td><code>btn btn-success</code></td>
-        <td>Indicates a successful or positive action</td>
+        <td>Indica uma ação bem sucedida e positiva</td>
       </tr>
       <tr>
         <td><button class="btn btn-warning" href="#">Aviso</button></td>
@@ -1573,7 +1573,7 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
       <p>Há 120 classes para escolha dos ícones. Simplesmente adicione uma tag <code>&lt;i&gt;</code> com a classe correta e pronto. Você pode encontrar a lista completa no arquivo <strong>sprites.less</strong> ou aqui neste documento.</p>
       <p>
         <span class="label label-info">Atenção!</span>
-        When using beside strings of text, as in buttons or nav links, be sure to leave a space after the <code>&lt;i&gt;</code> tag for proper spacing.
+        Quando usar além de strings de texto, como um botão ou links de navegação, tenha certeza de deixar um espaço depois da tag para espaçamento apropriado
       </p>
     </div>
     <div class="span4">
