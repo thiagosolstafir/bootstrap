@@ -1,7 +1,7 @@
 [Twitter Bootstrap translated to portuguese](http://alexanmtz.github.com/bootstrap/)
 =================
 
-PROGRESS: 90% of translated strings
+PROGRESS: 100% of translated strings
 
 This is a portuguese translated unofficial version of Twitter Bootstrap.
 
@@ -9,13 +9,16 @@ Esta é uma versão não oficial traduzida do Twitter Bootstrap.
 
 This script can be used to translate bootstrap to any language, just changing a json of key : translation file and execute the right commands to generate the docs in the desired language
 
-you can use `make translate` and `make gh-pages-translated`. The last command create a folder one step back at tree structure, and you can have a static generated page.
+you can use `make translate [lang]` and `make gh-pages-translated`. The last command create a folder one step back at tree structure, and you can have a static generated page.
 
-[Tutorials about Bootstrap and instructions to how translate to your language ](http://blog.alexandremagno.net/category/bootstrap-2/)
+[Tutorials do Bootstrap em português](http://blog.alexandremagno.net/category/bootstrap-2/)
 
-All changes should be made at `pt-br` branch.
+TRANSLATE FOR YOUR LANGUAGE
+[Translating Bootstrap](https://github.com/alexanmtz/bootstrap/wiki/Translate-to-your-language)
 
-Todas mudanças devem ser feitas na branch `pt-br`
+The internationalization structure is located at `i18n` branch.
+
+Os arquivos referentes a internacionalização estão na branch `i18n`
  
 
 [Twitter Bootstrap](http://twitter.github.com/bootstrap)
