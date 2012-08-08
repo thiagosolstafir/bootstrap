@@ -15,6 +15,7 @@
     "This is a portuguese version from twitter Bootstrap forked from Official Twitter Bootstrap. By <a href=\"http://blog.alexandremagno.net\">Alexandre Magno</a>": "Esta é uma versão em português do twitter Bootstrap do Bootstrap oficial do Twitter. Mantido por <a href=\"http://blog.alexandremagno.net\">Alexandre Magno</a>"
   },
   "Pages": {
+    "":"",
     "Form validation": "Validação de formulários",
     "Checkboxes": "Checkboxes",
     "class=\"\"": "class=\"\"",
@@ -1324,6 +1325,7 @@
     "The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.":"A quantidade de tempo para um intervalo que automaticamente coloca um item em ciclos. Se falso, o carousel irá automaticamente em ciclo",
     "Scaffolding and links":"Construção e links",
     "Page background color":"Cor de fundo da página",
+    "delay showing and hiding the popover (ms) - does not apply to manual trigger type": "Intervalo para mostrar e esconder o popover (ms) - não aplica ao uso do evento no modo manual",
     "Default text color for entire body, headings, and more":"Cor de texto padrão para o corpo completo, cabeçalho e mais",
     "Generate a percent grid system with <em>n</em> columns and <em>x</em> % wide gutter":"Gera um sistema de grid em percentagens com <em>n</em> colunas e <em>x</em> % de espaçamento entre colunas",
     "Generate the pixel grid system for <code>input</code> elements, accounting for padding and borders":"Gera um sistema de grid em pixal para elementos <code>input</code>, contando com padding e bordas",
