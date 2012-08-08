@@ -20,9 +20,11 @@
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
@@ -33,13 +35,13 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>
+          </button>
           <a class="brand" href="./index.html">Bootstrap</a>
-          <div class="nav-collapse">
+          <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
                 <a href="./index.html">Geral</a>
@@ -107,8 +109,7 @@
       <h3>CSS Base</h3>
       <label class="checkbox"><input checked="checked" type="checkbox" value="type.less"> Cabeçalho, corpo, etc</label>
       <label class="checkbox"><input checked="checked" type="checkbox" value="code.less"> Code e pre</label>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="labels.less"> Labels(rótulos)</label>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="badges.less"> Badges</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="labels-badges.less"> rótulos e emblemas</label>
       <label class="checkbox"><input checked="checked" type="checkbox" value="tables.less"> Tabelas</label>
       <label class="checkbox"><input checked="checked" type="checkbox" value="forms.less"> Formulários</label>
       <label class="checkbox"><input checked="checked" type="checkbox" value="buttons.less"> Botões</label>
@@ -143,7 +144,11 @@
       <label class="checkbox"><input checked="checked" type="checkbox" value="utilities.less"> Utilitários</label>
       <label class="checkbox"><input checked="checked" type="checkbox" value="component-animations.less"> Componente para animações</label>
       <h3>Responsive</h3>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="responsive.less"> Layouts responsivos</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-utilities.less"> classes visíveis/escondidas</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-767px-max.less"> Dispositivos menores e abaixo (<767px)</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-768px-979px.less"> Tables e destktop (767-979px)</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-1200px-min.less"> Desktop maiores (>1200px)</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-navbar.less"> Barra de navegação responsiva</label>
     </div><!-- /span -->
   </div><!-- /row -->
 </section>
@@ -276,14 +281,20 @@
       <input type="text" class="span3" placeholder="2.127659574%">
 
       <h3>Tipografia</h3>
+      <label>@sansFontFamily</label>
+      <input type="text" class="span3" placeholder="'Helvetica Neue', Helvetica, Arial, sans-serif">
+      <label>@serifFontFamily</label>
+      <input type="text" class="span3" placeholder="Georgia, 'Times New Roman', Times, serif">
+      <label>@monoFontFamily</label>
+      <input type="text" class="span3" placeholder="Menlo, Monaco, 'Courier New', monospace">
       <label>@baseFontSize</label>
       <input type="text" class="span3" placeholder="13px">
       <label>@baseFontFamily</label>
-      <input type="text" class="span3" placeholder="'Helvetica Neue', Helvetica, Arial, sans-serif">
+      <input type="text" class="span3" placeholder="@sansFontFamily">
       <label>@baseLineHeight</label>
       <input type="text" class="span3" placeholder="18px">
       <label>@altFontFamily</label>
-      <input type="text" class="span3" placeholder="Georgia, 'Times New Roman', Times, serif;">
+      <input type="text" class="span3" placeholder="@serifFontFamily">
       <label>@headingsFontFamily</label>
       <input type="text" class="span3" placeholder="inherit">
       <label>@headingsFontWeight</label>
@@ -317,6 +328,8 @@
       <input type="text" class="span3" placeholder="@grayDark">
       <label>@navbarText</label>
       <input type="text" class="span3" placeholder="@grayLight">
+      <label>@navbarBrandColor</label>
+      <input type="text" class="span3" placeholder="@navbarLinkColor">
       <label>@navbarLinkColor</label>
       <input type="text" class="span3" placeholder="@grayLight">
       <label>@navbarLinkColorHover</label>
@@ -356,8 +369,12 @@
       <input type="text" class="span3" placeholder="@white">
       <label>@inputBorder</label>
       <input type="text" class="span3" placeholder="#ccc">
+      <label>@inputBorderRadius</label>
+      <input type="text" class="span3" placeholder="3px">
       <label>@inputDisabledBackground</label>
       <input type="text" class="span3" placeholder="@grayLighter">
+      <label>@formActionsBackground</label>
+      <input type="text" class="span3" placeholder="#f5f5f5">
 
       <label>@btnPrimaryBackground</label>
       <input type="text" class="span3" placeholder="@linkColor">
@@ -392,7 +409,7 @@
     </h1>
   </div>
   <div class="download-btn">
-    <a class="btn btn-primary" href="#">Customizar e fazer Download</a>
+    <a class="btn btn-primary" href="#" onclick="_gaq.push(['_trackEvent', 'Customize', 'Download', 'Customize and Download']);">Customize and Download</a>
     <h4>O que é incluso?</h4>
     <p>Os downloads incluem o css compilado, minificado e os plugins jQuery são todos empacotados em um zipball para sua conveniência</p>
   </div>

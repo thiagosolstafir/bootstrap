@@ -20,9 +20,11 @@
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
@@ -33,13 +35,13 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>
+          </button>
           <a class="brand" href="./index.html">Bootstrap</a>
-          <div class="nav-collapse">
+          <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
                 <a href="./index.html">Geral</a>
@@ -110,8 +112,10 @@
     </div>
     <div class="span4">
       <h3>Exemplo de corpo de texto</h3>
-      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-      <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui.</p>
+      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+      <h3>cópia principal do corpo</h3>
+      <p>Faça um parágrafo sobressair adicionando <code>.lead</code>.</p>
+      <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
     </div>
     <div class="span4">
       <div class="well">
@@ -370,7 +374,14 @@
         <dd>Donec id elit non mi porta gravida at eget metus.</dd>
         <dt>Malesuada porta</dt>
         <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+        <dt>Felis euismod semper eget lacinia</dt>
+        <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
       </dl>
+      <hr>
+      <p>
+        <span class="label label-info">Atenção!</span>
+        Listas de descrição horizontal irá truncar termos que são muito longos para encaixar na esquerda da coluna fixa <code>text-overflow</code>. Em resoluções menores, eles irão mudar para o padrão de layout estagnado
+      </p>
     </div>
   </div><!-- /row -->
 </section>
@@ -874,14 +885,12 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
 
   <h2>Formulários de exemplo <small>Usando só controles de formulários, sem nenhuma marcação html extra</small></h2>
   <div class="row">
-    <div class="span3">
+    <div class="span6">
       <h3>Formulário básico</h3>
-      <p>Com o 2.0, nós temos padrões inteligentes</p>
-    </div>
-    <div class="span9">
+      <p>Padrões inteligentes e leves sem marcação extra</p>
       <form class="well">
         <label>Nome do título</label>
-        <input type="text" class="span3" placeholder="Digite algo..."> <span class="help-inline">Associated help text!</span>
+        <input type="text" class="span3" placeholder="Digite algo...">
         <p class="help-block">Ajuda de texto em bloco</p>
         <label class="checkbox">
           <input type="checkbox"> Olha eu
@@ -892,39 +901,30 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
 &lt;form class="well"&gt;
   &lt;label&gt;Nome do título&lt;/label&gt;
   &lt;input type="text" class="span3" placeholder="Digite algo..."&gt;
-  &lt;span class="help-inline"&gt;Associated help text!&lt;/span&gt;
+  &lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
   &lt;label class="checkbox"&gt;
     &lt;input type="checkbox"&gt; Olha eu
   &lt;/label&gt;
   &lt;button type="submit" class="btn"&gt;Enviar&lt;/button&gt;
 &lt;/form&gt;
 </pre>
-    </div>
-  </div> <!-- /row -->
-  <div class="row">
-    <div class="span3">
-      <h3>Formulário de busca</h3>
-      <p>Refletindo o padrão do Webkit, adicione <code>.form-search</code> para formulários de busca arredondados</p>
-    </div>
-    <div class="span9">
-      <form class="well form-search">
-        <input type="text" class="input-medium search-query">
-        <button type="submit" class="btn">Busca</button>
-      </form>
+  </div>
+  <div class="span6">
+    <h3>Formulário de busca</h3>
+    <p>Adicione <code>.form-search</code> para o formulário e <code>.search-query</code> para o <code>input</code>.</p>
+    <form class="well form-search">
+      <input type="text" class="input-medium search-query">
+      <button type="submit" class="btn">Busca</button>
+    </form>
 <pre class="prettyprint linenums">
 &lt;form class="well form-search"&gt;
   &lt;input type="text" class="input-medium search-query"&gt;
   &lt;button type="submit" class="btn"&gt;Busca&lt;/button&gt;
 &lt;/form&gt;
 </pre>
-    </div>
-  </div> <!-- /row -->
-  <div class="row">
-    <div class="span3">
+
       <h3>Formulário inline</h3>
-      <p>Inputs são elementos bloco para começar. Para <code>.form-inline</code> e <code>.form-horizontal</code>, nós usamos inline-block</p>
-    </div>
-    <div class="span9">
+      <p>Adicionar <code>.form-inline</code> para melhorar o alinhamento vertical e espaçamento de controles de formulários</p>
       <form class="well form-inline">
         <input type="text" class="input-small" placeholder="Email">
         <input type="password" class="input-small" placeholder="Senha">
@@ -943,17 +943,29 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
   &lt;button type="submit" class="btn"&gt;Entrar&lt;/button&gt;
 &lt;/form&gt;
 </pre>
-    </div>
+    </div><!-- /.span -->
   </div><!-- /row -->
 
   <br>
 
   <h2>Formulários horizontais</h2>
   <div class="row">
+    <div class="span4">
+      <p></p>
+      <p>Mostrado a direta todo o padrão de controle de formulários que a gente suporta. Aqui está uma lista com marcação</p>
+      <ul>
+        <li>Inputs de texto</li>
+        <li>checkbox</li>
+        <li>radio</li>
+        <li>select</li>
+        <li>select múltiplo</li>
+        <li>Input de arquivo</li>
+        <li>textarea</li>
+      </ul>
+    </div><!-- /.span -->
     <div class="span8">
       <form class="form-horizontal">
         <fieldset>
-          <legend>Suporte de controles do Bootstrap</legend>
           <div class="control-group">
             <label class="control-label" for="input01">Input de texto</label>
             <div class="controls">
@@ -1029,31 +1041,27 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
 &lt;/form&gt;
 </pre>
     </div>
-    <div class="span4">
-      <h3>O que está incluído</h3>
-      <p>Mostra na esquerda todos os padrão de controle de formulário padrão que suportamos. Aqui está a lista de ordenação</p>
-      <ul>
-        <li>Inputs de texto</li>
-        <li>checkbox</li>
-        <li>radio</li>
-        <li>select</li>
-        <li>select múltiplo</li>
-        <li>Input de arquivo</li>
-        <li>textarea</li>
-      </ul>
-      <hr>
-      <h3>Novos padrões no 2.0</h3>
-      <p>No Bootstrap 1.4 o estilo padrão tinha um layout horizontal. No 2 os padrões são escaláveis para qualquer formulário</p>
-    </div>
   </div>
 
   <br>
 
+  <h2>Estados de controle do formuário</h2>
   <div class="row">
+    <div class="span4">
+      <p>O Bootstrap suporta estilos para vários estados como disabled, outline e aplicamos box-shadow e :focus</p>
+      <hr>
+      <h3>Validação de formulários</h3>
+      <p>Também inclui validação para erros, avisos e sucessos. Adicione a classe erro em volta de um <code>.control-group</code></p>
+<pre class="prettyprint linenums">
+&lt;fieldset
+  class="control-group error"&gt;
+  …
+&lt;/fieldset&gt;
+</pre>
+    </div>
     <div class="span8">
       <form class="form-horizontal">
         <fieldset>
-          <legend>Estados de controle do formuário</legend>
           <div class="control-group">
             <label class="control-label" for="focusedInput">Input com foco</label>
             <div class="controls">
@@ -1122,28 +1130,29 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
         </fieldset>
       </form>
     </div>
-    <div class="span4">
-      <h3>Estados do browser redesenhados</h3>
-      <p>O Bootstrap suporta estilos para vários estados como disabled, outline e aplicamos box-shadow e :focus</p>
-      <hr>
-      <h3>Validação de formulários</h3>
-      <p>Também inclui validação para erros, avisos e sucessos. Adicione a classe erro em volta de um <code>.control-group</code></p>
-<pre class="prettyprint linenums">
-&lt;fieldset
-  class="control-group error"&gt;
-  …
-&lt;/fieldset&gt;
-</pre>
-    </div>
   </div>
 
   <br>
 
+  <h2>Extendendo controle de formulários</h2>
   <div class="row">
+    <div class="span4">
+      <h3>inputs sobrepostos e antepostos</h3>
+      <p>Grupos de input&mdash;com texto sobreposto ou anteposto dão uma maneira fácil de dar mais contexto para seus inputs. Ótimos examples incluem o sinal @ para um usuário twitter ou $ para finanças</p>
+      <hr>
+      <h3>Checkbox e radio</h3>
+      <p>Depois da versão 1.4, o Bootstrap requer markup extra nos checkboxes e radios para estagná-los. Agora, é uma maneira simples de repetir <code>&lt;label class="checkbox"&gt;</code> que fica em torno de <code>&lt;input type="checkbox"&gt;</code>.</p>
+      <p>Checkbox inline e radios também são suportados, adicione <code>.inline</code> para qualquer <code>.checkbox</code> ou <code>.radio</code> e está feito</p>
+      <hr>
+      <h4>Formulários inline e antepostos / sobrepostos</h4>
+      <p>Para usar textos antepostos e sobrepostos em um formulário inline, certifique-se de colocar o <code>.add-on</code> and <code>input</code> na mesma linha, sem espaços</p>
+      <hr>
+      <h4>Formulários de texto ajuda</h4>
+      <p>Para adicionar texto de ajuda nos inputs, inclua uma ajuda inline com <code>&lt;span class="help-inline"&gt;</code> ou um bloco de texto de ajuda com <code>&lt;p class="help-block"&gt;</code> depois do elemento input</p>
+    </div>
     <div class="span8">
       <form class="form-horizontal">
         <fieldset>
-          <legend>Extendendo controle de formulários</legend>
           <div class="control-group">
             <label class="control-label">Tamanhos do grid do form</label>
             <div class="controls docs-input-sizes">
@@ -1210,10 +1219,18 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="appendedPrependedInput">Anteposto com botão</label>
+            <label class="control-label" for="appendedInputButton">Anteposto com botão</label>
             <div class="controls">
               <div class="input-append">
-                <input class="span2" id="appendedPrependedInput" size="16" type="text"><button class="btn" type="button">Go!</button>
+                <input class="span2" id="appendedInputButton" size="16" type="text"><button class="btn" type="button">Go!</button>
+              </div>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="appendedInputButtons">Dois botões inseridos</label>
+            <div class="controls">
+              <div class="input-append">
+                <input class="span2" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button">Search</button><button class="btn" type="button">Options</button>
               </div>
             </div>
           </div>
@@ -1258,7 +1275,7 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
               </label>
               <label class="radio">
                 <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                A opção 2 pode ser algo a mais selecionada e não selecionar a opção 1
+                A opção 2 pode ser algo mais e selecionando irá desselacionar a opção 1
               </label>
             </div>
           </div>
@@ -1268,20 +1285,6 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
           </div>
         </fieldset>
       </form>
-    </div>
-    <div class="span4">
-      <h3>inputs sobrepostos e antepostos</h3>
-      <p>Grupos de input&mdash;com texto sobreposto ou anteposto dão uma maneira fácil de dar mais contexto para seus inputs. Ótimos examples incluem o sinal @ para um usuário twitter ou $ para finanças</p>
-      <hr>
-      <h3>Checkbox e radio</h3>
-      <p>Depois da versão 1.4, o Bootstrap requer markup extra nos checkboxes e radios para estagná-los. Agora, é uma maneira simples de repetir <code>&lt;label class="checkbox"&gt;</code> que fica em torno de <code>&lt;input type="checkbox"&gt;</code>.</p>
-      <p>Checkbox inline e radios também são suportados, adicione <code>.inline</code> para qualquer <code>.checkbox</code> ou <code>.radio</code> e está feito</p>
-      <hr>
-      <h4>Formulários inline e antepostos / sobrepostos</h4>
-      <p>Para usar textos antepostos e sobrepostos em um formulário inline, certifique-se de colocar o <code>.add-on</code> and <code>input</code> na mesma linha, sem espaços</p>
-      <hr>
-      <h4>Formulários de texto ajuda</h4>
-      <p>Para adicionar texto de ajuda nos inputs, inclua uma ajuda inline com <code>&lt;span class="help-inline"&gt;</code> ou um bloco de texto de ajuda com <code>&lt;p class="help-block"&gt;</code> depois do elemento input</p>
     </div>
   </div><!-- /row -->
 </section>
@@ -1316,7 +1319,7 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
       <tr>
         <td><button class="btn btn-info" href="#">Informações</button></td>
         <td><code>btn btn-info</code></td>
-        <td>Usar como alternativa para estilos padrão</td>
+        <td>Usado como uma alternativa para os estilos padrões</td>
       </tr>
       <tr>
         <td><button class="btn btn-success" href="#">Sucesso</button></td>
@@ -1445,15 +1448,15 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
         <li><i class="icon-inbox"></i> icon-inbox</li>
         <li><i class="icon-play-circle"></i> icon-play-circle</li>
         <li><i class="icon-repeat"></i> icon-repeat</li>
-      </ul>
-    </div>
-    <div class="span3">
-      <ul class="the-icons">
         <li><i class="icon-refresh"></i> icon-refresh</li>
         <li><i class="icon-list-alt"></i> icon-list-alt</li>
         <li><i class="icon-lock"></i> icon-lock</li>
         <li><i class="icon-flag"></i> icon-flag</li>
         <li><i class="icon-headphones"></i> icon-headphones</li>
+      </ul>
+    </div>
+    <div class="span3">
+      <ul class="the-icons">
         <li><i class="icon-volume-off"></i> icon-volume-off</li>
         <li><i class="icon-volume-down"></i> icon-volume-down</li>
         <li><i class="icon-volume-up"></i> icon-volume-up</li>
@@ -1479,10 +1482,6 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
         <li><i class="icon-indent-right"></i> icon-indent-right</li>
         <li><i class="icon-facetime-video"></i> icon-facetime-video</li>
         <li><i class="icon-picture"></i> icon-picture</li>
-      </ul>
-    </div>
-    <div class="span3">
-      <ul class="the-icons">
         <li><i class="icon-pencil"></i> icon-pencil</li>
         <li><i class="icon-map-marker"></i> icon-map-marker</li>
         <li><i class="icon-adjust"></i> icon-adjust</li>
@@ -1493,6 +1492,10 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
         <li><i class="icon-move"></i> icon-move</li>
         <li><i class="icon-step-backward"></i> icon-step-backward</li>
         <li><i class="icon-fast-backward"></i> icon-fast-backward</li>
+      </ul>
+    </div>
+    <div class="span3">
+      <ul class="the-icons">
         <li><i class="icon-backward"></i> icon-backward</li>
         <li><i class="icon-play"></i> icon-play</li>
         <li><i class="icon-pause"></i> icon-pause</li>
@@ -1513,10 +1516,6 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
         <li><i class="icon-remove-circle"></i> icon-remove-circle</li>
         <li><i class="icon-ok-circle"></i> icon-ok-circle</li>
         <li><i class="icon-ban-circle"></i> icon-ban-circle</li>
-      </ul>
-    </div>
-    <div class="span3">
-      <ul class="the-icons">
         <li><i class="icon-arrow-left"></i> icon-arrow-left</li>
         <li><i class="icon-arrow-right"></i> icon-arrow-right</li>
         <li><i class="icon-arrow-up"></i> icon-arrow-up</li>
@@ -1532,6 +1531,10 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
         <li><i class="icon-leaf"></i> icon-leaf</li>
         <li><i class="icon-fire"></i> icon-fire</li>
         <li><i class="icon-eye-open"></i> icon-eye-open</li>
+      </ul>
+    </div>
+    <div class="span3">
+      <ul class="the-icons">
         <li><i class="icon-eye-close"></i> icon-eye-close</li>
         <li><i class="icon-warning-sign"></i> icon-warning-sign</li>
         <li><i class="icon-plane"></i> icon-plane</li>
@@ -1547,6 +1550,26 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
         <li><i class="icon-folder-open"></i> icon-folder-open</li>
         <li><i class="icon-resize-vertical"></i> icon-resize-vertical</li>
         <li><i class="icon-resize-horizontal"></i> icon-resize-horizontal</li>
+        <li><i class="icon-hdd"></i> icon-hdd</li>
+        <li><i class="icon-bullhorn"></i> icon-bullhorn</li>
+        <li><i class="icon-bell"></i> icon-bell</li>
+        <li><i class="icon-certificate"></i> icon-certificate</li>
+        <li><i class="icon-thumbs-up"></i> icon-thumbs-up</li>
+        <li><i class="icon-thumbs-down"></i> icon-thumbs-down</li>
+        <li><i class="icon-hand-right"></i> icon-hand-right</li>
+        <li><i class="icon-hand-left"></i> icon-hand-left</li>
+        <li><i class="icon-hand-up"></i> icon-hand-up</li>
+        <li><i class="icon-hand-down"></i> icon-hand-down</li>
+        <li><i class="icon-circle-arrow-right"></i> icon-circle-arrow-right</li>
+        <li><i class="icon-circle-arrow-left"></i> icon-circle-arrow-left</li>
+        <li><i class="icon-circle-arrow-up"></i> icon-circle-arrow-up</li>
+        <li><i class="icon-circle-arrow-down"></i> icon-circle-arrow-down</li>
+        <li><i class="icon-globe"></i> icon-globe</li>
+        <li><i class="icon-wrench"></i> icon-wrench</li>
+        <li><i class="icon-tasks"></i> icon-tasks</li>
+        <li><i class="icon-filter"></i> icon-filter</li>
+        <li><i class="icon-briefcase"></i> icon-briefcase</li>
+        <li><i class="icon-fullscreen"></i> icon-fullscreen</li>
       </ul>
     </div>
   </div>
@@ -1570,7 +1593,7 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
 <pre class="prettyprint linenums">
 &lt;i class="icon-search icon-white"&gt;&lt;/i&gt;
 </pre>
-      <p>Há 120 classes para escolha dos ícones. Simplesmente adicione uma tag <code>&lt;i&gt;</code> com a classe correta e pronto. Você pode encontrar a lista completa no arquivo <strong>sprites.less</strong> ou aqui neste documento.</p>
+      <p>Há 140 classes para escolher os ícones. Simplesmente adiciona uma tag <code>&lt;i&gt;</code> com as classes corretas e você está setado. Você pode encontrar uma lista completa em <strong>sprites.less</strong> ou aqui neste documento</p>
       <p>
         <span class="label label-info">Atenção!</span>
         Quando usar além de strings de texto, como um botão ou links de navegação, tenha certeza de deixar um espaço depois da tag para espaçamento apropriado
@@ -1639,8 +1662,7 @@ Por exemplo, &lt;code&gt;section&lt;/code&gt; é um elemento inline
           <label class="control-label" for="inputIcon">Endereço de email</label>
           <div class="controls">
             <div class="input-prepend">
-              <span class="add-on"><i class="icon-envelope"></i></span>
-              <input class="span2" id="inputIcon" type="text">
+              <span class="add-on"><i class="icon-envelope"></i></span><input class="span2" id="inputIcon" type="text">
             </div>
           </div>
         </div>
